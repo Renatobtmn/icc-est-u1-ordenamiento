@@ -8,7 +8,7 @@ public class Insertion {
         for (int i=1;i<arreglo.length;i++){
         int key = arreglo[i];
         int j=i-1;
-        while (j>=0 && arreglo[j] > key){
+        while (j>=0 && arreglo[j] < key){
             comparaciones++;
             desplazamientos++;
             arreglo[j+1] = arreglo[j];
