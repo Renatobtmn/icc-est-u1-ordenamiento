@@ -10,13 +10,23 @@ public class Selection {
                     posMenor = j;
                 }
             }
-
-            int temporal = arreglo[i];
+            if (posMenor != i) {
+                System.out.println("Pasada= " + i + 
+                " | cambio " + arreglo[i] + "<->" + arreglo[posMenor]);
+                 int temporal = arreglo[i];
             arreglo[i] = arreglo[posMenor];
             arreglo[posMenor] = temporal;
+
+
+            
         }
     }
+ }    
 }
+
+
+
+
 
 
 
