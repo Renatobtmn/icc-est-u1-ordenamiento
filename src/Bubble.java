@@ -1,3 +1,5 @@
+import models.Estudiante;
+
 public class Bubble {
     
     public int[] sort (int[] arreglo){
@@ -26,5 +28,28 @@ public class Bubble {
         System.out.println("comparaciones" +comparaciones);
         return null;
         }
+    public void sortEstudiantes(Estudiante[] estudiantes){
+        for ( int i = 0 ; i<estudiantes.length;i++){ 
+            boolean cambio = false;
+            for(int j=0;j<estudiantes.length-1-i;j++){
+                if (estudiantes[j].getNota().compareTo(estudiantes[j+1].getNota()) > 0){
+
+                // intercambio
+                Estudiante aux= estudiantes[j];
+                estudiantes[j] = estudiantes[j+1];
+                estudiantes[j+1]= aux;
+
+                cambio=true;
+            }    
+                     
+
+                
+        }
+        if (!cambio)
+            break;
+
+        }
+    }
+
     }
     

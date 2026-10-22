@@ -1,39 +1,72 @@
+import java.util.Comparator;
+import java.util.Arrays;
+
+import models.Estudiante;
+
 public class App {
-    public static void main(String[] args) throws Exception {
-        int[]original={5,4,1,2,3,6};
-        int[]b=original.clone();
-        int[]c= original.clone();
-        int[]d=original.clone();
-
-        // USAR EL METODO DEL ARCHIVO(CLASE)BUBBLE
-        //INSTANCIAR el archivo BUBBLE
-        //INSTANCIA la clase Bubble
-        Bubble bubble=new Bubble();  
-        System.out.println();
-        printArreglo(b);
-        bubble.sort(b);
-        printArreglo(b);
-
-        //instanciar selection
-        ///
-        // instanciar selection
-        System.out.println("\n\n--- Selection Sort ---");
-        printArreglo(c, "Original");
-        Selection.ordenarSeleccion(c);
-        printArreglo(c, "Ordenado Ascendente");
-
-        //instanciar insertion
-        ///
-         System.out.println("\n\n---Insertion Sort---");
-         Insertion insertion= new Insertion();
-         printArreglo(d,"original");
-         Insertion.sort(d);
-         printArreglo(d,"Ordenado Ascendente");
-
+    public static void main(String[] args) throws Exception{
+        runEjemplosPrimitivos();
+        runEjemplosObjetos();
         
-        
-
     }
+    public static void PrintArreglo(Estudiante[] arr, String title) {
+        System.out.println(title);
+        for(int i=0; i<arr.length;i++)
+            System.out.println(arr[i] + " - ");
+        System.out.println();
+        
+    }
+
+    private static void runComparaciones(){
+        Integer original ={5,6,4,1,3};
+        Arrays.sort(original);
+        for(int i = 0 ;i <original.length){
+
+        }
+    }
+    
+
+
+
+
+    private static void runEjemplosObjetos() {
+        Estudiante e1= new Estudiante("Juan" , 10);
+        
+        Estudiante[] estudiantes = {e1,
+                new  Estudiante("Maria" , 7.0),
+                new Estudiante("Diego" , 3.5),
+                new Estudiante("Pedro" , 3.8),
+        };     
+
+        
+                                    
+        
+
+        Bubble bubble = new Bubble();
+        bubble.sortEstudiantes(estudiantes);
+        
+
+
+
+
+        
+
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'runEjemplosObjetos'");
+    }
+
+
+
+
+
+    private static void runEjemplosPrimitivos() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'runEjemplosPrimitivos'");
+    }
+
+
+
+
 
     public static void printArreglo(int[] arr,String title) {
         System.out.println(title);
