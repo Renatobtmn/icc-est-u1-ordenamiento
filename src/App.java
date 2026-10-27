@@ -18,7 +18,7 @@ public class App {
     }
 
     private static void runComparaciones(){
-        Integer original ={5,6,4,1,3};
+        Integer[] original ={5,6,4,1,3};
         Arrays.sort(original);
         for(int i = 0 ;i <original.length){
 
